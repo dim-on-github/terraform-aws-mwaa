@@ -127,7 +127,7 @@ resource "aws_s3_bucket_versioning" "mwaa" {
   bucket = aws_s3_bucket.mwaa[0].id
 
   versioning_configuration {
-    status = "Enabled"
+    status = var.s3_versioning_configuration
   }
 }
 

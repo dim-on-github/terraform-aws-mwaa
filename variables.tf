@@ -102,6 +102,12 @@ variable "requirements_s3_path" {
   default     = null
 }
 
+variable "s3_versioning_configuration" {
+  description = "(Optional) The S3 bucket versioning state. Valid values: Enabled, Suspended, or Disabled. Disabled should only be used when creating or importing resources that correspond to unversioned S3 buckets."
+  type        = string
+  default     = "Enabled"
+}
+
 variable "startup_script_s3_object_version" {
   description = "(Optional) The version of the startup shell script you want to use. You must specify the version ID that Amazon S3 assigns to the file every time you update the script."
   type        = string
